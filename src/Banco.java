@@ -1,24 +1,32 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
 
-	private String nome;
-	private List<Conta> contas;
+    private String nome;
+    private List<Cliente> clientes;
 
-	public String getNome() {
-		return nome;
-	}
+    public Banco(String nome) {
+        this.nome = nome;
+        this.clientes = new ArrayList<>();
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
 
-	public List<Conta> getContas() {
-		return contas;
-	}
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
 
-	public void setContas(List<Conta> contas) {
-		this.contas = contas;
-	}
+    public void adicionarCliente(Cliente cliente) {
+        clientes.add(cliente);
+    }
 
+    public void listarClientes() {
+        System.out.println("Clientes do banco " + nome + ":");
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente.getNome());
+        }
+    }
 }
