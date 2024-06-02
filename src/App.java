@@ -5,7 +5,7 @@ public class App {
 		venilton.setNome("Venilton");
 
         Cliente cliente2 = new Cliente();
-        cliente2.setNome("Fulano");
+        cliente2.setNome("Willian");
 		
 		
         Banco banco = new Banco("");
